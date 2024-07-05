@@ -8,6 +8,8 @@ function Header() {
         <div className="navbar">
           <h4>Menu</h4>
           <h4>Contact Us</h4>
+          <h4>Aboutus Us</h4>
+          <h4 id="login">Login</h4>
         </div>
       </nav>
     </header>

@@ -76,9 +76,24 @@ nav {
 
 .navbar {
   display: flex;
-  gap: 10px;
+  gap: 20px;
   cursor: pointer;
   padding-right: 2rem;
+}
+
+.navbar h4 {
+  font-size: 1.5rem;
+  background-color: var(--color-red);
+  color: var(--color-light);
+  padding: 5px;
+  border-radius: 10px;
+}
+
+#login {
+  background-color: var(--color-light);
+  color: var(--color-red);
+  padding: 5px;
+  border-radius: 10px;
 }
 
 .footer {
