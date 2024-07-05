@@ -87,6 +87,7 @@ nav {
   color: var(--color-light);
   padding: 5px;
   border-radius: 10px;
+  transition: all 0.3s;
 }
 
 #login {
@@ -94,6 +95,15 @@ nav {
   color: var(--color-red);
   padding: 5px;
   border-radius: 10px;
+}
+
+.navbar h4:hover {
+  transform: translateY(-3px);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(22, 15, 47, 0.6);
+}
+
+.navbar h4:active {
+  transform: translateY(-1px);
 }
 
 .footer {
