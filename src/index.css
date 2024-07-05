@@ -63,8 +63,13 @@ header {
 }
 
 .icon {
-  padding: 1.5rem;
+  padding: 1.1rem;
   cursor: pointer;
+  transition: all 0.3s;
+}
+
+.icon:hover {
+  scale: 1.5;
 }
 
 nav {
@@ -105,8 +110,71 @@ nav {
 .navbar h4:active {
   transform: translateY(-1px);
 }
+/***************footer*********/
 
-.footer {
+footer {
   background-color: var(--color-gray);
   border-radius: 10px;
+  display: flex;
+  gap: 30px;
+  height: 8rem;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.7rem;
+}
+
+a {
+  text-decoration: none;
+  margin-right: 30px;
+}
+
+.copyright {
+  font-size: 0.8rem;
+}
+
+/*************/
+
+@media (max-width: 700px) {
+  .grid {
+    width: 100%;
+    flex-direction: column;
+  }
+  .card {
+    width: 80%;
+  }
+}
+
+.space {
+  flex: 1;
+}
+
+.emoji {
+  display: inline-block;
+  animation: bounce 1.5s infinite;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color: var(--color-blu);
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.icons {
+  transition: transform 0.3s ease-in-out;
+}
+
+.icons:hover {
+  transform: rotate(360deg) scale(1.2);
+  fill: var(--color-yelow);
+}
+
+.footer-name:hover {
+  color: var(--color-yelow);
 }
