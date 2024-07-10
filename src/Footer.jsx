@@ -4,7 +4,7 @@ function Footer() {
   const openHour = 12;
   const closeHour = 23;
   const isOpen = hour >= openHour && hour <= closeHour;
-  console.log(isOpen);
+  // console.log(isOpen);
 
   return (
     <footer>

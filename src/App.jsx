@@ -1,6 +1,5 @@
 import Footer from "./Footer";
 import Header from "./Header";
-import Menu from "./Menu";
 
 const pizzaData = [
   {
@@ -48,12 +47,44 @@ const pizzaData = [
 ];
 
 function App() {
+  console.log(pizzaData.name);
   return (
     <div className="app">
       <Header />
       <Menu name={pizzaData.name} />
       <Footer />
     </div>
+  );
+}
+
+function Menu() {
+  return (
+    <div>
+      <Pizza
+        name="Pizza Spinaci"
+        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
+        photoName="../public/pizzas/spinaci.jpg"
+        price={10}
+      />
+    </div>
+  );
+}
+
+function Pizza(props) {
+  return (
+    <main>
+      <div className="searchbtn">
+        <label htmlFor="search">Search</label>
+        <input id="search" type="search" pattern=".*\S.*" required />
+        <span className="caret"></span>
+      </div>
+      <div className="pizza">
+        <img src={props.photoName} alt="spinaci" width="200px" />
+        <h3>{props.name} </h3>
+        <p>{props.ingredients} </p>
+        <span>{props.price} </span>
+      </div>
+    </main>
   );
 }
 
