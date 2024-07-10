@@ -1,7 +1,7 @@
 function Footer() {
   const currentYear = new Date().getFullYear();
   const hour = new Date().getHours();
-  const openHour = 8;
+  const openHour = 12;
   const closeHour = 23;
   const isOpen = hour >= openHour && hour <= closeHour;
 
@@ -9,14 +9,13 @@ function Footer() {
     <footer>
       <div className="hour">
         <h4>
-          {isOpen && (
-            <div className="order">
-              <p>
-                We are open until {closeHour}:00. Come to visit us or order
-                online.
-              </p>
-              <button className="btn">Order</button>
-            </div>
+          {isOpen ? (
+            <Order closeHour={closeHour} />
+          ) : (
+            <p>
+              We're happy to welcome you between {openHour}:00 and {closeHour}
+              :00.
+            </p>
           )}
         </h4>
       </div>
@@ -57,6 +56,18 @@ function Footer() {
         </p>
       </div>
     </footer>
+  );
+}
+
+function Order(props) {
+  return (
+    <div className="order">
+      <p>
+        We are open until {props.closeHour}:00. Come to visit us or order
+        online.
+      </p>
+      <button className="btn">Order</button>
+    </div>
   );
 }
 
