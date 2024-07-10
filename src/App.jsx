@@ -3,7 +3,7 @@ import Header from "./Header";
 
 const pizzaData = [
   {
-    name: "Focaccia",
+    name: "Pizza Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
     photoName: "../public/pizzas/focaccia.jpg",
