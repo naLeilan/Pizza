@@ -7,6 +7,7 @@
   --color-light: #fffeff;
   --bg: #181513;
   --color-red: #c00b29;
+  --color-red2: #9e0922;
   --color-gray1: #353a3d;
   --color-gray2: #222527;
 
@@ -105,6 +106,84 @@ nav {
   transform: translateY(-1px);
 }
 
+/*********************/
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4rem;
+}
+
+.menu h2 {
+  display: inline-block;
+  padding: 1rem 0;
+  border-top: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  font-weight: 500;
+}
+
+.menu > p {
+  font-size: 1.5rem;
+  text-align: center;
+  line-height: 1.6;
+  width: 80%;
+}
+
+.pizzas {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.pizza {
+  display: flex;
+}
+
+.pizza img {
+  width: 12rem;
+  aspect-ratio: 1;
+  align-self: start;
+}
+
+.pizza div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+  padding-top: 0.4rem;
+  padding-left: 1rem;
+}
+
+.pizza h3 {
+  font-size: 1.5rem;
+  font-weight: 400;
+}
+
+.pizza p {
+  font-size: 1rem;
+  font-weight: 300;
+  font-style: italic;
+  margin-bottom: auto;
+}
+
+.pizza span {
+  display: block;
+  font-size: 1.6rem;
+}
+
+.pizza.sold-out {
+  color: #888;
+}
+
+.pizza.sold-out img {
+  filter: grayscale();
+  opacity: 0.8;
+}
+
 /**********main***********/
 
 main {
@@ -127,10 +206,42 @@ footer {
   display: flex;
   flex-direction: column;
   padding-top: 2rem;
-  height: 12rem;
+  height: 15rem;
   align-items: center;
   justify-content: space-around;
   font-size: 0.7rem;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 1rem;
+}
+
+.order p {
+  padding-bottom: 1rem;
+}
+
+.btn {
+  color: inherit;
+  font-family: inherit;
+  border: none;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-color: var(--color-red);
+  color: var(--color-light);
+  padding: 1.2rem 3rem;
+  letter-spacing: 5px;
+  border-radius: 10px;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  background-color: var(--color-red2);
+  box-shadow: 0.5rem 0.5rem 1rem rgb(22, 15, 47, 0.6);
 }
 
 a {
@@ -146,7 +257,9 @@ a {
   display: flex;
   flex-direction: row;
   width: 100%;
-  justify-content: space-around;
+  padding-left: 5rem;
+  align-items: center;
+  /* justify-content: space-around; */
 }
 
 .hour {

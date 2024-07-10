@@ -6,42 +6,42 @@ const pizzaData = [
     name: "Focaccia",
     ingredients: "Bread with italian olive oil and rosemary",
     price: 6,
-    photoName: "pizzas/focaccia.jpg",
+    photoName: "../public/pizzas/focaccia.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Margherita",
     ingredients: "Tomato and mozarella",
     price: 10,
-    photoName: "pizzas/margherita.jpg",
+    photoName: "../public/pizzas/margherita.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Spinaci",
     ingredients: "Tomato, mozarella, spinach, and ricotta cheese",
     price: 12,
-    photoName: "pizzas/spinaci.jpg",
+    photoName: "../public/pizzas/spinaci.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Funghi",
     ingredients: "Tomato, mozarella, mushrooms, and onion",
     price: 12,
-    photoName: "pizzas/funghi.jpg",
+    photoName: "../public/pizzas/funghi.jpg",
     soldOut: false,
   },
   {
     name: "Pizza Salamino",
     ingredients: "Tomato, mozarella, and pepperoni",
     price: 15,
-    photoName: "pizzas/salamino.jpg",
+    photoName: "../public/pizzas/salamino.jpg",
     soldOut: true,
   },
   {
     name: "Pizza Prosciutto",
     ingredients: "Tomato, mozarella, ham, aragula, and burrata cheese",
     price: 18,
-    photoName: "pizzas/prosciutto.jpg",
+    photoName: "../public/pizzas/prosciutto.jpg",
     soldOut: false,
   },
 ];
@@ -58,32 +58,35 @@ function App() {
 }
 
 function Menu() {
+  const pizzas = pizzaData;
+
   return (
-    <div>
-      <Pizza
-        name="Pizza Spinaci"
-        ingredients="Tomato, mozarella, spinach, and ricotta cheese"
-        photoName="../public/pizzas/spinaci.jpg"
-        price={10}
-      />
-    </div>
+    <main className="menu">
+      <ul className="pizzas">
+        {pizzas.map((pizza) => (
+          <Pizza pizzaObj={pizza} key={pizza.name} />
+        ))}
+      </ul>
+    </main>
   );
 }
 
 function Pizza(props) {
   return (
     <main>
-      <div className="searchbtn">
+      {/* <div className="searchbtn">
         <label htmlFor="search">Search</label>
         <input id="search" type="search" pattern=".*\S.*" required />
         <span className="caret"></span>
-      </div>
-      <div className="pizza">
-        <img src={props.photoName} alt="spinaci" width="200px" />
-        <h3>{props.name} </h3>
-        <p>{props.ingredients} </p>
-        <span>{props.price} </span>
-      </div>
+      </div> */}
+      <li className="pizza">
+        <img src={props.pizzaObj.photoName} alt="spinaci" width="200px" />
+        <div>
+          <h3>{props.pizzaObj.name} </h3>
+          <p>{props.pizzaObj.ingredients} </p>
+          <span>{props.pizzaObj.price} </span>
+        </div>
+      </li>
     </main>
   );
 }

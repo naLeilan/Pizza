@@ -1,7 +1,6 @@
 import Pizza from "./Pizza1";
 
 function Menu(props) {
-  console.log(props);
   return (
     <div>
       <Pizza />
