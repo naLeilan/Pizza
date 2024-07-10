@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Menu />
+      <Menu name={pizzaData.name} />
       <Footer />
     </div>
   );

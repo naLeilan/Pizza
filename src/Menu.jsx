@@ -1,9 +1,9 @@
 import Pizza from "./Pizza";
 
-function Menu() {
+function Menu({ name }) {
   return (
     <div>
-      <Pizza />
+      <Pizza name={name} />
     </div>
   );
 }

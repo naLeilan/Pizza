@@ -122,8 +122,9 @@ footer {
   background-color: var(--color-gray);
   border-radius: 10px;
   display: flex;
-  gap: 30px;
-  height: 8rem;
+  flex-direction: column;
+  padding-top: 2rem;
+  height: 12rem;
   align-items: center;
   justify-content: space-around;
   font-size: 0.7rem;
@@ -136,6 +137,17 @@ a {
 
 .copyright {
   font-size: 0.8rem;
+}
+
+.footer-div {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.hour {
+  font-size: 1rem;
 }
 
 /*************/
