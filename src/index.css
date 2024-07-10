@@ -45,15 +45,7 @@ body {
   width: 950px;
 }
 
-main {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
-  background-color: var(--color-light);
-  color: var(--bg);
-  border-radius: 10px;
-}
-
+/********header*******/
 header {
   background-color: var(--color-red);
   display: flex;
@@ -110,6 +102,20 @@ nav {
 .navbar h4:active {
   transform: translateY(-1px);
 }
+
+/**********main***********/
+
+main {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  background-color: var(--color-light);
+  color: var(--bg);
+  border-radius: 10px;
+}
+
+/*******search **********/
+
 /***************footer*********/
 
 footer {
