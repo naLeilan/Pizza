@@ -51,7 +51,7 @@ function App() {
   return (
     <div className="app">
       <Header />
-      <Menu name={pizzaData.name} />
+      <Menu />
       <Footer />
     </div>
   );
@@ -63,12 +63,20 @@ function Menu() {
 
   return (
     <main className="menu">
+      <h2>Our Menu</h2>
+
       {numPizzas > 0 ? (
-        <ul className="pizzas">
-          {pizzas.map((pizza) => (
-            <Pizza pizzaObj={pizza} key={pizza.name} />
-          ))}
-        </ul>
+        <>
+          <p className="menu-p">
+            Authentic Italian cuisine. Creative dishes to choose from. All from
+            our stone oven, all organic, all delicious.
+          </p>
+          <ul className="pizzas">
+            {pizzas.map((pizza) => (
+              <Pizza pizzaObj={pizza} key={pizza.name} />
+            ))}
+          </ul>
+        </>
       ) : (
         <p>Comming Soon...</p>
       )}

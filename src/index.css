@@ -112,9 +112,9 @@ nav {
 
 .menu {
   display: flex;
-  flex-direction: row;
   align-items: center;
-  gap: 4rem;
+  gap: 2rem;
+  color: var(--color-gray1);
 }
 
 .menu h2 {
@@ -122,13 +122,13 @@ nav {
   padding: 1rem 0;
   border-top: 2px solid currentColor;
   border-bottom: 2px solid currentColor;
-  font-size: 2.4rem;
+  font-size: 2rem;
   text-transform: uppercase;
   letter-spacing: 3px;
   font-weight: 500;
 }
 
-.menu > p {
+.menu-p {
   font-size: 1.5rem;
   text-align: center;
   line-height: 1.6;
@@ -179,7 +179,7 @@ nav {
 }
 
 .pizza.sold-out {
-  color: #888;
+  color: var(--color-red2);
 }
 
 .pizza.sold-out img {
@@ -194,7 +194,7 @@ main {
   flex-direction: column;
   padding: 1rem;
   background-color: var(--color-light);
-  color: var(--bg);
+  color: var(--color-gray1);
   /* border-radius: 10px; */
 }
 
