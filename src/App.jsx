@@ -59,14 +59,17 @@ function App() {
 
 function Menu() {
   const pizzas = pizzaData;
+  const numPizzas = pizzas.length;
 
   return (
     <main className="menu">
-      <ul className="pizzas">
-        {pizzas.map((pizza) => (
-          <Pizza pizzaObj={pizza} key={pizza.name} />
-        ))}
-      </ul>
+      {numPizzas > 0 && (
+        <ul className="pizzas">
+          {pizzas.map((pizza) => (
+            <Pizza pizzaObj={pizza} key={pizza.name} />
+          ))}
+        </ul>
+      )}
     </main>
   );
 }
