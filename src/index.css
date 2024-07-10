@@ -7,7 +7,8 @@
   --color-light: #fffeff;
   --bg: #181513;
   --color-red: #c00b29;
-  --color-gray: #353a3d;
+  --color-gray1: #353a3d;
+  --color-gray2: #222527;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -38,7 +39,7 @@ body {
   display: flex;
   flex-direction: column;
   color: var(--color-light);
-  background-color: var(--color-gray);
+  background-color: var(--color-gray1);
   padding: 1rem;
   border-radius: 10px;
   height: 100%;
@@ -51,7 +52,8 @@ header {
   display: flex;
   justify-content: space-between;
   height: 9rem;
-  border-radius: 10px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .icon {
@@ -111,7 +113,7 @@ main {
   padding: 1rem;
   background-color: var(--color-light);
   color: var(--bg);
-  border-radius: 10px;
+  /* border-radius: 10px; */
 }
 
 /*******search **********/
@@ -119,8 +121,9 @@ main {
 /***************footer*********/
 
 footer {
-  background-color: var(--color-gray);
-  border-radius: 10px;
+  background-color: var(--color-gray2);
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
   display: flex;
   flex-direction: column;
   padding-top: 2rem;

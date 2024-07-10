@@ -10,7 +10,11 @@ function Footer() {
     <footer>
       <div className="hour">
         <h4>
-          {isOpen ? `We are Open from ${openHour} to ${closeHour} ` : "closed"}
+          {isOpen && (
+            <div className="order">
+              <p>`We are open until ${closeHour}`</p>
+            </div>
+          )}
         </h4>
       </div>
       <div className="footer-div">
