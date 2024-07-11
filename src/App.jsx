@@ -92,12 +92,12 @@ function Pizza({ pizzaObj }) {
         <input id="search" type="search" pattern=".*\S.*" required />
         <span className="caret"></span>
       </div> */}
-      <li className="pizza">
+      <li className={`pizza ${pizzaObj.soldOut ? "sold-out" : ""} `}>
         <img src={pizzaObj.photoName} alt="spinaci" width="200px" />
         <div>
           <h3>{pizzaObj.name} </h3>
           <p>{pizzaObj.ingredients} </p>
-          <span>{pizzaObj.price} </span>
+          <span>{pizzaObj.soldOut ? "SOLD OUT" : pizzaObj.price} </span>
         </div>
       </li>
     </main>
